@@ -118,10 +118,8 @@ function initTabs() {
       tabBtn.click();
       const panel = document.getElementById(id);
       if (panel) {
-        // Scroll to the section header above, not deep inside the panel,
-        // so the user sees the tab strip context.
-        const tabsSection = document.getElementById("practice");
-        const target = tabsSection || panel;
+        const tabStrip = document.querySelector(".tab-strip");
+        const target = tabStrip || panel;
         const navOffset = 120; // sticky nav + anchor bar
         const top = target.getBoundingClientRect().top + window.scrollY - navOffset;
         window.scrollTo({ top, behavior: "smooth" });
