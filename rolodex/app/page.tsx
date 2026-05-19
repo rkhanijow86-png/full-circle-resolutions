@@ -9,7 +9,11 @@ export default function Home() {
   const [showForm, setShowForm] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", source: "" });
 
-  const contacts = useQuery(search ? api.contacts.search : api.contacts.list, search ? { q: search } : {});
+  const allContacts = useQuery(api.contacts.list, {});
+  const contacts = allContacts?.filter((c) =>
+    c.name.toLowerCase().includes(search.toLowerCase()) ||
+    (c.company ?? "").toLowerCase().includes(search.toLowerCase())
+  );
   const createContact = useMutation(api.contacts.create);
   const removeContact = useMutation(api.contacts.remove);
 
