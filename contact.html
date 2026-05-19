@@ -34,7 +34,6 @@
 <!-- CONTACT HERO -->
 <header class="page-header contact-header">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact</p>
     <div class="contact-hero">
       <div class="fade-in">
         <p class="eyebrow">Begin a conversation</p>
@@ -56,7 +55,7 @@
           <ul class="contact-list">
             <li>
               <span class="cl-label">Email</span>
-              <a href="mailto:hello@sunsetresolutions.com">hello@sunsetresolutions.com</a>
+              <a href="mailto:sunsetresolute@gmail.com">sunsetresolute@gmail.com</a>
             </li>
             <li>
               <span class="cl-label">Phone</span>
@@ -68,7 +67,7 @@
             </li>
             <li>
               <span class="cl-label">Instagram</span>
-              <a href="https://instagram.com" target="_blank" rel="noopener">@wendonproject</a>
+              <a href="https://www.instagram.com/wendon_project/" target="_blank" rel="noopener">@wendonproject</a>
             </li>
           </ul>
 
@@ -175,13 +174,10 @@
       </div>
       <div class="footer-contact">
         <ul>
-          <li><a href="mailto:hello@sunsetresolutions.com">hello@sunsetresolutions.com</a></li>
+          <li><a href="mailto:sunsetresolute@gmail.com">sunsetresolute@gmail.com</a></li>
           <li><a href="tel:+3530871849972">+353 87 184 9972</a></li>
           <li>
-            <span class="footer-social">
-              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-              <span class="dot">·</span>
-              <a href="https://www.linkedin.com/in/raghavkhanijow93/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            <span class="footer-social"><a href="https://www.linkedin.com/in/raghavkhanijow93/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
             </span>
           </li>
         </ul>
@@ -297,6 +293,13 @@
   max-width: 640px;
 }
 .closing-single h2 { margin-bottom: var(--s-4); }
+
+@media (max-width: 480px) {
+  .contact-body { padding-top: var(--s-6); padding-bottom: var(--s-6); }
+  .contact-info-card { padding: var(--s-5); }
+  .contact-form-wrap { padding: var(--s-5); }
+  .response-card { padding: var(--s-4); }
+}
 </style>
 
 <script>
@@ -354,7 +357,7 @@
       .catch(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = 'Send your note <span class="arrow">→</span>';
-        alert("Something went wrong — please try emailing directly at hello@sunsetresolutions.com");
+        alert("Something went wrong — please try emailing directly at sunsetresolute@gmail.com");
       });
   });
 

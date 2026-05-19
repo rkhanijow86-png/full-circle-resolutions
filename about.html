@@ -34,7 +34,6 @@
 <!-- ABOUT HERO -->
 <header class="page-header about-header">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</p>
     <div class="about-hero-grid">
       <div class="fade-in">
         <p class="eyebrow">A short introduction</p>
@@ -191,13 +190,10 @@
       </div>
       <div class="footer-contact">
         <ul>
-          <li><a href="mailto:hello@sunsetresolutions.com">hello@sunsetresolutions.com</a></li>
+          <li><a href="mailto:sunsetresolute@gmail.com">sunsetresolute@gmail.com</a></li>
           <li><a href="tel:+3530871849972">+353 87 184 9972</a></li>
           <li>
-            <span class="footer-social">
-              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-              <span class="dot">·</span>
-              <a href="https://www.linkedin.com/in/raghavkhanijow93/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            <span class="footer-social"><a href="https://www.linkedin.com/in/raghavkhanijow93/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
             </span>
           </li>
         </ul>
@@ -230,6 +226,9 @@
   margin-top: var(--s-6);
 }
 @media (max-width: 900px) { .about-hero-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+  .portrait-wrap image-slot { min-height: 300px; aspect-ratio: 3 / 4; }
+}
 .about-hero-grid h1 em {
   font-style: italic;
   color: var(--terracotta-deep);
@@ -266,6 +265,7 @@
   align-items: flex-end;
   gap: var(--s-6);
   flex-wrap: wrap;
+  margin-bottom: var(--s-7);
 }
 .linkedin-link { flex-shrink: 0; align-self: flex-start; }
 .creds-grid { gap: var(--s-5); }
@@ -296,15 +296,8 @@
 /* TRAININGS */
 .trainings {
   margin-top: var(--s-9);
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: var(--s-8);
-  align-items: start;
 }
-@media (max-width: 900px) {
-  .trainings { grid-template-columns: 1fr; gap: var(--s-6); }
-}
-.trainings-header { max-width: 38ch; }
+.trainings-header { max-width: none; margin-bottom: var(--s-5); }
 .trainings-header h3 { margin: var(--s-2) 0 var(--s-3); }
 .trainings-header p { color: var(--on-surface-soft); margin: 0; }
 .trainings-list {

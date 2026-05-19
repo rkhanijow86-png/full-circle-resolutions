@@ -50,7 +50,6 @@
 <!-- ============ PAGE HEADER ============ -->
 <header class="page-header adr-header">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Dispute Resolution</p>
     <div class="adr-header-grid">
       <div class="adr-header-copy">
         <div class="fade-in">
@@ -120,8 +119,9 @@
       <div class="panel-hero water-panel">
         <div class="panel-hero-copy fade-in">
           <h2 style="color: var(--cream-soft);">Holistic Dispute Resolution</h2>
-          <p style="color: var(--cream-soft);">Holistic Dispute Resolution moves conflict resolution out of adversarial structures and into a process that is genuinely human-centered. We are more than our disputes, and this approach holds the well-being of person at its core, which can include the emotional, relational, and physical state that we all experience in conflict. Ultimately, this allows for people to integrate back into relationship, and community, after a dispute.</p>
-          <p style="color: var(--cream-soft);">This process is confidential, non-binding unless an agreement is signed. This process is also facilitated impartially, in that both parties will be heard and attended to, in service of the human and the dispute.</p>
+          <p style="color: var(--cream-soft);">This practice moves conflict resolution out of an adversarial structure into a process that is genuinely human-centered. We are more than our disputes, and this approach holds the well-being of person at its core.</p>
+          <p style="color: var(--cream-soft);">This can include Sound Meditations, breathing exercises, time in nature, somatic techniques, a physical environment of care, and more, as we unpack a conflict together.</p>
+          <p style="color: var(--cream-soft);">This process is confidential and non-binding unless an agreement is signed. This process is facilitated impartially, in that both parties will be heard and attended to, in service of the human and the dispute.</p>
         </div>
         <div class="panel-hero-img fade-in delay-2">
           <image-slot id="adr-retreat-hero" shape="rounded" radius="20" src="uploads/Studio with Gong.jpg" placeholder="Photo of a mediation or retreat space: quiet room, two chairs, coastal view, etc."></image-slot>
@@ -283,13 +283,14 @@
       </div>
 
       <div class="container">
-        <div class="role-block fade-in">
-          <span class="role-label">Role of the facilitator</span>
-          <p class="role-lead">A circle is only as honest as the person holding it.</p>
-          <p>My role is to set the structure, agreements, pace, who speaks when, and then to allow what needs to be said, to be said. Good facilitation feels almost invisible. It makes hard truths feel safer to say, and silence feel productive rather than awkward. I bring a trauma-informed, wellness-oriented presence, and track the room's nervous system.</p>
-        </div>
+        <div class="circles-top-grid fade-in">
+          <div class="role-block">
+            <span class="role-label">Role of the facilitator</span>
+            <p class="role-lead">A circle is only as honest as the person holding it.</p>
+            <p>My role is to set the structure, agreements, pace, who speaks when, and then to allow what needs to be said, to be said. Good facilitation feels almost invisible. It makes hard truths feel safer to say, and silence feel productive rather than awkward. I bring a trauma-informed, wellness-oriented presence, and track the room's nervous system.</p>
+          </div>
 
-        <div class="circles-what fade-in">
+          <div class="circles-what">
           <h3>What does this look like</h3>
           <ul class="feature-list">
             <li class="fade-in">
@@ -321,7 +322,8 @@
               </div>
             </li>
           </ul>
-        </div>
+          </div><!-- end circles-what -->
+        </div><!-- end circles-top-grid -->
 
         <!-- Process steps -->
         <div class="process fade-in">
@@ -376,13 +378,10 @@
       </div>
       <div class="footer-contact">
         <ul>
-          <li><a href="mailto:hello@sunsetresolutions.com">hello@sunsetresolutions.com</a></li>
+          <li><a href="mailto:sunsetresolute@gmail.com">sunsetresolute@gmail.com</a></li>
           <li><a href="tel:+3530871849972">+353 87 184 9972</a></li>
           <li>
-            <span class="footer-social">
-              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-              <span class="dot">·</span>
-              <a href="https://www.linkedin.com/in/raghavkhanijow93/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            <span class="footer-social"><a href="https://www.linkedin.com/in/raghavkhanijow93/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
             </span>
           </li>
         </ul>
@@ -627,6 +626,8 @@
 .tab-panel.active { display: block; }
 
 /* PANEL HERO, full-width water/earth gradients */
+#retreats .container { max-width: 860px; }
+
 .panel-hero {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
@@ -1008,14 +1009,23 @@
 }
 #circles .cta-card { margin-top: var(--s-6); }
 .circles-what { margin: var(--s-9) 0; }
-#circles .circles-what { margin: var(--s-6) 0; }
+#circles .circles-what { margin: 0; }
 .circles-what h3 { margin-bottom: var(--s-6); font-size: clamp(22px, 2.2vw, 30px); }
 
 /* Circles panel — full-width layout, stronger type */
+.circles-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-8);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .circles-top-grid { grid-template-columns: 1fr; }
+}
 #circles .role-block {
-  margin-top: var(--s-8);
-  padding-top: var(--s-6);
-  border-top: 1px solid var(--rule);
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
   max-width: none;
 }
 #circles .role-lead {
@@ -1097,6 +1107,25 @@
   gap: var(--s-3) var(--s-4);
 }
 .how-we-work-inline + .cta-card { margin-top: var(--s-6); }
+
+@media (max-width: 480px) {
+  .adr-anchor-inner { flex-wrap: wrap; gap: 4px; }
+  .adr-anchor-link { font-size: 12px; padding: 6px 8px; }
+  .adr-anchor-cta { font-size: 13px; padding: 8px 12px; }
+
+  .tab { min-width: 0; padding: var(--s-4) var(--s-4); }
+  .tab-label { font-size: 15px; }
+
+  .panel-hero { padding: var(--s-5) var(--s-4); gap: var(--s-5); }
+  .panel-hero-img image-slot { min-height: 200px; }
+
+  .how-we-work-shared { padding: var(--s-4) var(--s-4); }
+
+  .acc-item > summary { padding: var(--s-4) var(--s-4); }
+  .acc-body { padding-left: var(--s-4); padding-right: var(--s-4); }
+
+  .process-grid .process-step { padding: var(--s-4); }
+}
 </style>
 
 </body>

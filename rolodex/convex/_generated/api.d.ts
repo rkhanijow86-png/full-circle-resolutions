@@ -9,6 +9,7 @@
  */
 
 import type * as contacts from "../contacts.js";
+import type * as http from "../http.js";
 import type * as notes from "../notes.js";
 
 import type {
@@ -19,6 +20,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   contacts: typeof contacts;
+  http: typeof http;
   notes: typeof notes;
 }>;
 
