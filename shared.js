@@ -130,15 +130,35 @@ function initTabs() {
   });
 }
 
+// ----- Activate tab from URL hash on page load -----
+function initHashTab() {
+  const hash = window.location.hash.slice(1);
+  if (!hash) return;
+  const tabBtn = document.querySelector(`[data-tab="${hash}"]`);
+  if (!tabBtn) return;
+  tabBtn.click();
+  const tabsSection = document.getElementById("practice");
+  const target = tabsSection || document.getElementById(hash);
+  if (target) {
+    const navOffset = 120;
+    setTimeout(() => {
+      const top = target.getBoundingClientRect().top + window.scrollY - navOffset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }, 50);
+  }
+}
+
 // ----- Init on DOM ready -----
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
     initNav();
     initFadeIns();
     initTabs();
+    initHashTab();
   });
 } else {
   initNav();
   initFadeIns();
   initTabs();
+  initHashTab();
 }

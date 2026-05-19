@@ -177,7 +177,7 @@ h1, h2, h3, h4 {
 h1 { font-size: clamp(40px, 5.6vw, 70px); font-weight: 400; letter-spacing: 0; line-height: 1.15; }
 h2 { font-size: clamp(28px, 3.8vw, 46px); font-weight: 400; line-height: 1.2; letter-spacing: 0; }
 h3 { font-size: clamp(21px, 2.2vw, 26px); font-family: var(--serif); font-weight: 400; letter-spacing: 0; line-height: 1.4; }
-h4 { font-size: 13px; font-family: var(--sans); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage-deep); }
+h4 { font-size: 13px; font-family: var(--sans); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--forest-deep); }
 
 /* Accent highlights — warm holistic word colors */
 .accent { color: var(--terracotta-deep); font-style: italic; }
@@ -186,7 +186,7 @@ h4 { font-size: 13px; font-family: var(--sans); font-weight: 500; letter-spacing
 em.holistic { color: var(--terracotta-deep); font-style: italic; }
 
 p { margin: 0 0 var(--s-4) 0; max-width: 62ch; text-wrap: pretty; }
-.lead { font-size: clamp(18px, 1.5vw, 21px); line-height: 1.65; color: var(--on-surface-soft); font-weight: 400; }
+.lead { font-size: clamp(18px, 1.5vw, 21px); line-height: 1.65; color: var(--on-surface); font-weight: 400; }
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -196,7 +196,7 @@ p { margin: 0 0 var(--s-4) 0; max-width: 62ch; text-wrap: pretty; }
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--sage-deep);
+  color: var(--forest-deep);
   margin: 0 0 var(--s-5) 0;
 }
 .eyebrow::before { content: none; }
@@ -440,6 +440,10 @@ image-slot {
   --slot-border: var(--rule);
   border-radius: var(--radius);
 }
+image-slot[data-filled] {
+  filter: contrast(1.08) saturate(1.06) brightness(1.01);
+  image-rendering: high-quality;
+}
 
 /* ============================================
    CARDS / TILES
@@ -480,20 +484,22 @@ image-slot {
 .feature-list li:last-child { border-bottom: none; }
 .feature-list .marker {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: color-mix(in oklab, var(--sage) 40%, var(--surface));
+  background: color-mix(in oklab, var(--terracotta) 10%, var(--surface));
+  border: 1px solid color-mix(in oklab, var(--terracotta) 28%, transparent);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--forest-deep);
+  color: var(--terracotta-deep);
   font-family: var(--serif);
-  font-size: 14px;
+  font-style: italic;
+  font-size: 13px;
   margin-top: 2px;
 }
 .feature-list h4 { margin: 0 0 4px 0; color: var(--on-surface); font-family: var(--serif); font-size: 19px; letter-spacing: 0; text-transform: none; font-weight: 400; }
-.feature-list p { margin: 0; color: var(--on-surface-soft); font-size: 15.5px; }
+.feature-list p { margin: 0; color: var(--on-surface); font-size: 15.5px; }
 
 /* ============================================
    PAGE HEADER / BANNER
@@ -505,11 +511,11 @@ image-slot {
 }
 .page-header .breadcrumb {
   font-size: 13px;
-  color: var(--muted);
+  color: var(--ink-soft);
   letter-spacing: 0.04em;
   margin-bottom: var(--s-4);
 }
-.page-header .breadcrumb a { color: var(--muted); }
+.page-header .breadcrumb a { color: var(--ink-soft); }
 .page-header h1 { margin-bottom: var(--s-5); }
 
 /* ============================================
@@ -781,7 +787,7 @@ image-slot {
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--on-surface-soft);
+  color: var(--on-surface);
 }
 .form-field input,
 .form-field select,
@@ -859,7 +865,10 @@ image-slot {
   color: var(--cream-soft);
   font-weight: 500;
 }
-.bg-sage { background: color-mix(in oklab, var(--sage) 35%, var(--surface-2)); }
+.bg-sage { background: color-mix(in oklab, var(--sage) 35%, var(--surface-2)); color: var(--forest-deep); }
+.bg-sage p, .bg-sage li { color: var(--forest-deep); }
+.bg-sage h2, .bg-sage h3, .bg-sage h4 { color: var(--forest-deep); }
+.bg-sage .eyebrow { color: var(--forest-deep); }
 .divider {
   height: 1px;
   background: var(--rule);
