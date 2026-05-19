@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<script src="image-slot.js"></script>
-<script src="shared.js"></script>
+<script src="image-slot.js" defer></script>
+<script src="shared.js" defer></script>
 </head>
 <body data-screen-label="02 ADR" class="page-adr">
 
@@ -24,7 +24,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="adr.html" class="active">Dispute Resolution</a></li>
-      <li><a href="services.html">Community Services</a></li>
+      <li><a href="services.html">The Wendon Project</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Reach out</a></li>
     </ul>
@@ -75,13 +75,42 @@
       <p class="eyebrow">Two practices, one philosophy</p>
     </div>
 
-    <div class="tab-strip fade-in delay-1" role="tablist">
+    <!-- How We Work — shared across both practices -->
+    <div class="how-we-work-shared fade-in delay-1">
+      <span class="how-eyebrow">How we work</span>
+      <div class="how-row">
+        <span class="how-step" tabindex="0">
+          <span class="how-num">01</span><span class="how-label">Enquire</span>
+          <span class="how-desc">A short note or call to share what you're navigating. No commitment.</span>
+        </span>
+        <span class="how-sep">·</span>
+        <span class="how-step" tabindex="0">
+          <span class="how-num">02</span><span class="how-label">Intake conversation</span>
+          <span class="how-desc">Confidential one-to-one chats with each party so I understand the situation and the people inside it.</span>
+        </span>
+        <span class="how-sep">·</span>
+        <span class="how-step" tabindex="0">
+          <span class="how-num">03</span><span class="how-label">The work itself</span>
+          <span class="how-desc">The mediation, retreat, or circle, paced and shaped to fit the dispute and the people in it.</span>
+        </span>
+        <span class="how-sep">·</span>
+        <span class="how-step" tabindex="0">
+          <span class="how-num">04</span><span class="how-label">Integration</span>
+          <span class="how-desc">Time and practices to let what surfaced settle, so the agreement is felt as well as signed.</span>
+        </span>
+        <span class="how-sep">·</span>
+        <span class="how-step" tabindex="0">
+          <span class="how-num">05</span><span class="how-label">Aftercare</span>
+          <span class="how-desc">Follow-up check-ins to keep agreements alive and to support what comes next.</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="tab-strip fade-in delay-2" role="tablist">
       <button class="tab active" data-tab="retreats" role="tab">
-        <span class="tab-num">01</span>
         <span class="tab-label">Holistic Dispute Resolution</span>
       </button>
       <button class="tab" data-tab="circles" role="tab">
-        <span class="tab-num">02</span>
         <span class="tab-label">Restorative Circles</span>
       </button>
     </div>
@@ -90,10 +119,9 @@
     <div class="tab-panel active" data-panel="retreats" id="retreats">
       <div class="panel-hero water-panel">
         <div class="panel-hero-copy fade-in">
-          <p class="eyebrow" style="color: var(--cream-soft);">Sub-practice 01</p>
           <h2 style="color: var(--cream-soft);">Holistic Dispute Resolution</h2>
-          <p style="color: var(--cream-soft);">Holistic Dispute Resolution moves conflict resolution out of adversarial legal structures and into a process that is genuinely human-centered. We are more than our disputes, and this approach holds the wellbeing of every part of a person at its core, which can include the emotional, relational, and physical state of the people involved. Ultimately, this allows for people to integrate back into relationship, and community, better, after a dispute.</p>
-          <p style="color: var(--cream-soft);">This process is confidential, non-binding unless an agreement is signed. This process is also facilitated impartially, in that both parties will be heard and their well-being attended to, in service of the human and the dispute.</p>
+          <p style="color: var(--cream-soft);">Holistic Dispute Resolution moves conflict resolution out of adversarial structures and into a process that is genuinely human-centered. We are more than our disputes, and this approach holds the well-being of person at its core, which can include the emotional, relational, and physical state that we all experience in conflict. Ultimately, this allows for people to integrate back into relationship, and community, after a dispute.</p>
+          <p style="color: var(--cream-soft);">This process is confidential, non-binding unless an agreement is signed. This process is also facilitated impartially, in that both parties will be heard and attended to, in service of the human and the dispute.</p>
         </div>
         <div class="panel-hero-img fade-in delay-2">
           <image-slot id="adr-retreat-hero" shape="rounded" radius="20" src="uploads/Studio with Gong.jpg" placeholder="Photo of a mediation or retreat space: quiet room, two chairs, coastal view, etc."></image-slot>
@@ -108,7 +136,7 @@
         </div>
 
         <div class="accordion fade-in">
-          <details class="acc-item" open>
+          <details class="acc-item">
             <summary>
               <span class="acc-tag">A</span>
               <span class="acc-title">Holistic Mediation</span>
@@ -232,37 +260,6 @@
           </p>
         </div>
 
-        <!-- How we work, just above the closing CTA -->
-        <div class="how-we-work-inline fade-in">
-          <span class="how-eyebrow">How we work</span>
-          <div class="how-row">
-            <span class="how-step" tabindex="0">
-              <span class="how-num">01</span><span class="how-label">Enquire</span>
-              <span class="how-desc">A short note or call to share what you're navigating. No commitment.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">02</span><span class="how-label">Intake conversation</span>
-              <span class="how-desc">Confidential one-to-one chats with each party so I understand the situation and the people inside it.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">03</span><span class="how-label">The work itself</span>
-              <span class="how-desc">The mediation, retreat, or circle, paced and shaped to fit the dispute and the people in it.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">04</span><span class="how-label">Integration</span>
-              <span class="how-desc">Time and practices to let what surfaced settle, so the agreement is felt as well as signed.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">05</span><span class="how-label">Aftercare</span>
-              <span class="how-desc">Follow-up check-ins to keep agreements alive and to support what comes next.</span>
-            </span>
-          </div>
-        </div>
-
         <!-- CTA card -->
         <div class="cta-card fade-in">
           <div>
@@ -279,10 +276,9 @@
     <div class="tab-panel" data-panel="circles" id="circles">
       <div class="panel-hero earth-panel circles-hero-text-only">
         <div class="panel-hero-copy fade-in">
-          <p class="eyebrow" style="color: var(--cream-soft);">Sub-practice 02</p>
           <h2 style="color: var(--cream-soft);">Restorative Circles</h2>
-          <p style="color: var(--cream-soft);">Restorative circles are facilitated circles that hold communities and individuals through the difficult and necessary work of repair. These circles are designed for when harm has occurred to a certain community, or a culture needs to be improved and a value system developed.</p>
-          <p style="color: var(--cream-soft);">Some examples are if an event has occurred that has impacted a community, if a department or group of people are fractured, or if an organization needs to understand their values and mission.</p>
+          <p style="color: var(--cream-soft);">Restorative circles are facilitated circles that hold communities and individuals through the difficult and necessary work of repair after harm.</p>
+          <p style="color: var(--cream-soft);">Some examples are when an event has occurred that has impacted a community, a department or group of people are fractured, or if an organization needs to understand their values and mission.</p>
         </div>
       </div>
 
@@ -354,37 +350,6 @@
           </div>
         </div>
 
-        <!-- How we work, just above the closing CTA -->
-        <div class="how-we-work-inline fade-in">
-          <span class="how-eyebrow">How we work</span>
-          <div class="how-row">
-            <span class="how-step" tabindex="0">
-              <span class="how-num">01</span><span class="how-label">Enquire</span>
-              <span class="how-desc">A short note or call to share what you're navigating. No commitment.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">02</span><span class="how-label">Intake conversation</span>
-              <span class="how-desc">Confidential one-to-one chats with each party so I understand the situation and the people inside it.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">03</span><span class="how-label">The work itself</span>
-              <span class="how-desc">The mediation, retreat, or circle, paced and shaped to fit the dispute and the people in it.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">04</span><span class="how-label">Integration</span>
-              <span class="how-desc">Time and practices to let what surfaced settle, so the agreement is felt as well as signed.</span>
-            </span>
-            <span class="how-sep">·</span>
-            <span class="how-step" tabindex="0">
-              <span class="how-num">05</span><span class="how-label">Aftercare</span>
-              <span class="how-desc">Follow-up check-ins to keep agreements alive and to support what comes next.</span>
-            </span>
-          </div>
-        </div>
-
         <div class="cta-card fade-in">
           <div>
             <p class="eyebrow">Bring a circle to your organisation</p>
@@ -423,9 +388,6 @@
         </ul>
       </div>
     </div>
-    <div class="footer-logo-slot">
-      <image-slot id="footer-logo" shape="rounded" radius="8" fit="contain" placeholder="Drop your logo here (transparent PNG / SVG works best)"></image-slot>
-    </div>
     <div class="footer-bottom">
       <span>© 2026 Sunset Resolutions · West Cork, Ireland</span>
     </div>
@@ -442,13 +404,13 @@
 /* STICKY ANCHOR NAV */
 .adr-anchor {
   position: sticky;
-  top: 64px;
-  z-index: 50;
-  background: color-mix(in oklab, var(--surface) 92%, transparent);
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
-  border-top: 1px solid var(--rule);
+  top: 60px;
+  z-index: 90;
+  background: color-mix(in oklab, var(--surface) 96%, transparent);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
   border-bottom: 1px solid var(--rule);
+  box-shadow: 0 2px 12px rgba(40,30,20,0.06);
 }
 .adr-anchor-inner {
   display: flex;
@@ -627,32 +589,39 @@
 /* TAB STRIP */
 .tab-strip {
   display: flex;
-  gap: 0;
-  border-bottom: 1px solid var(--rule);
+  gap: var(--s-3);
   margin-bottom: var(--s-8);
   flex-wrap: wrap;
 }
 .tab {
   flex: 1;
-  background: none;
-  border: none;
-  text-align: left;
-  padding: var(--s-5) var(--s-5) var(--s-5) 0;
+  background: color-mix(in oklab, var(--on-surface) 6%, transparent);
+  border: 1.5px solid color-mix(in oklab, var(--on-surface) 14%, transparent);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: var(--s-5) var(--s-6);
   cursor: pointer;
   font-family: var(--sans);
-  color: var(--muted);
+  color: var(--on-surface-soft);
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   gap: var(--s-3);
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
   min-width: 200px;
 }
-.tab:hover { color: var(--on-surface); }
-.tab.active { color: var(--on-surface); border-bottom-color: var(--terracotta); }
-.tab-num { font-family: var(--serif); font-style: italic; font-size: 30px; color: var(--terracotta-deep); font-weight: 600; }
-.tab-label { font-size: 18px; font-weight: 500; }
+.tab:hover {
+  background: color-mix(in oklab, var(--terracotta) 10%, transparent);
+  border-color: var(--terracotta);
+  color: var(--on-surface);
+}
+.tab.active {
+  background: var(--forest-deep);
+  border-color: var(--forest-deep);
+  color: var(--cream-soft);
+  box-shadow: 0 2px 12px color-mix(in oklab, var(--forest-deep) 30%, transparent);
+}
+.tab-label { font-size: 17px; font-weight: 600; letter-spacing: 0.01em; }
 
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
@@ -690,6 +659,19 @@
   display: block;
   --slot-bg: rgba(255,255,255,0.18);
   --slot-border: rgba(255,255,255,0.4);
+}
+.water-panel .panel-hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.water-panel .panel-hero-img image-slot {
+  max-width: 300px;
+  max-height: 300px;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .panel-hero-img image-slot[data-filled] {
   filter: contrast(1.1) saturate(1.08) brightness(1.01);
@@ -977,6 +959,7 @@
 
 /* PROCESS */
 .process { margin: var(--s-9) 0; }
+#circles .process { margin: var(--s-6) 0; }
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1023,7 +1006,9 @@
   border-radius: var(--radius-lg);
   margin-top: var(--s-9);
 }
+#circles .cta-card { margin-top: var(--s-6); }
 .circles-what { margin: var(--s-9) 0; }
+#circles .circles-what { margin: var(--s-6) 0; }
 .circles-what h3 { margin-bottom: var(--s-6); font-size: clamp(22px, 2.2vw, 30px); }
 
 /* Circles panel — full-width layout, stronger type */
@@ -1055,6 +1040,26 @@
   line-height: 1.7;
 }
 
+/* SHARED HOW WE WORK — between header and tabs */
+.how-we-work-shared {
+  margin: var(--s-6) 0 var(--s-7);
+  padding: var(--s-5) var(--s-6);
+  background: color-mix(in oklab, var(--sage-deep) 18%, transparent);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in oklab, var(--on-surface) 10%, transparent);
+}
+.how-we-work-shared .how-eyebrow {
+  display: block;
+  margin-bottom: var(--s-4);
+}
+.how-we-work-shared .how-row {
+  border: none;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: var(--s-3) var(--s-5);
+}
+.how-we-work-shared .how-step { flex: 1 1 140px; }
+
 .cta-card-actions { display: flex; flex-direction: column; gap: var(--s-3); align-items: flex-start; }
 .cta-card .btn-secondary { border-color: var(--cream-soft); color: var(--cream-soft); }
 .cta-card .btn-secondary:hover { background: color-mix(in oklab, var(--cream-soft) 15%, transparent); }
@@ -1071,6 +1076,11 @@
 /* HOW WE WORK — inline above each panel's CTA */
 .how-we-work-inline {
   margin-top: var(--s-9);
+}
+#circles .how-we-work-inline {
+  margin-top: var(--s-6);
+}
+.how-we-work-inline {
   padding: var(--s-5) 0;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);

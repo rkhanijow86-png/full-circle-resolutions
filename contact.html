@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<script src="image-slot.js"></script>
-<script src="shared.js"></script>
+<script src="image-slot.js" defer></script>
+<script src="shared.js" defer></script>
 </head>
 <body data-screen-label="05 Contact" class="page-contact">
 
@@ -24,7 +24,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="adr.html">Dispute Resolution</a></li>
-      <li><a href="services.html">Community Services</a></li>
+      <li><a href="services.html">The Wendon Project</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta active">Reach out</a></li>
     </ul>
@@ -157,15 +157,10 @@
 <!-- LOCATION / CLOSING -->
 <section class="closing-band bg-cream-deep">
   <div class="container">
-    <div class="closing-grid">
-      <div class="fade-in">
-        <p class="eyebrow">A place at the edge of the Atlantic</p>
-        <h2>If the work brings you here, you'll be <span class="accent-sage">glad it did</span>.</h2>
-        <p>West Cork has been a quiet refuge for difficult conversations for a long time. Wide skies, old trees, slow weather. For retreats and in-person work, this is our home base. For everything else, I travel, and I work readily online.</p>
-      </div>
-      <div class="closing-img fade-in delay-1">
-        <image-slot id="contact-coast" shape="rounded" radius="20" placeholder="A West Cork coast or landscape photo"></image-slot>
-      </div>
+    <div class="closing-single fade-in">
+      <p class="eyebrow">A place at the edge of the Atlantic</p>
+      <h2>If the work brings you here, you'll be <span class="accent-sage">glad it did</span>.</h2>
+      <p>West Cork has been a quiet refuge for difficult conversations for a long time. Wide skies, old trees, slow weather. For retreats and in-person work, this is our home base. For everything else, I travel, and I work readily online.</p>
     </div>
   </div>
 </section>
@@ -191,9 +186,6 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="footer-logo-slot">
-      <image-slot id="footer-logo" shape="rounded" radius="8" fit="contain" placeholder="Drop your logo here (transparent PNG / SVG works best)"></image-slot>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Sunset Resolutions · West Cork, Ireland</span>
@@ -301,18 +293,10 @@
 .form-meta { font-size: 13px; color: var(--muted); font-style: italic; }
 
 /* CLOSING */
-.closing-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s-8);
-  align-items: center;
+.closing-single {
+  max-width: 640px;
 }
-@media (max-width: 900px) { .closing-grid { grid-template-columns: 1fr; } }
-.closing-img image-slot {
-  width: 100%;
-  aspect-ratio: 5 / 4;
-  display: block;
-}
+.closing-single h2 { margin-bottom: var(--s-4); }
 </style>
 
 <script>

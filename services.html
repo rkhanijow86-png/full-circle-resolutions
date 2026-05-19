@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<script src="image-slot.js"></script>
-<script src="shared.js"></script>
+<script src="image-slot.js" defer></script>
+<script src="shared.js" defer></script>
 </head>
 <body data-screen-label="03 Services" class="page-services">
 
@@ -24,7 +24,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="adr.html">Dispute Resolution</a></li>
-      <li><a href="services.html" class="active">Community Services</a></li>
+      <li><a href="services.html" class="active">The Wendon Project</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Reach out</a></li>
     </ul>
@@ -60,42 +60,41 @@
       <h2>How the Wendon Project shows up in West Cork.</h2>
     </div>
 
-    <!-- 01 Coalition -->
-    <article class="focus-block fade-in" id="coalition">
+    <!-- 01 Sound -->
+    <article class="focus-block fade-in" id="sound">
       <span class="focus-num" aria-hidden="true">01</span>
+      <div class="focus-copy">
+        <p class="eyebrow">Sound-Based Meditations</p>
+        <h2><span class="accent-sage">Resonance</span> as medicine.</h2>
+        <p>I facilitate sound meditations using Tibetan bowls, gongs, cultural instruments, drumming, voice, and more. Sound work is one of the oldest tools we have for shifting the state of a room or a nervous system. I offer regular community sound baths and sessions for groups and post-circle integration.</p>
+      </div>
+    </article>
+
+    <!-- 02 Specialised -->
+    <article class="focus-block fade-in" id="facilitation">
+      <span class="focus-num" aria-hidden="true">02</span>
+      <div class="focus-copy">
+        <p class="eyebrow">Specialised Facilitation</p>
+        <h2>Restorative Justice and <span class="accent">Prevention Programming</span>.</h2>
+        <p>I lead restorative justice and prevention programming around discrimination, harassment, retaliation, and gender-based violence. This work is offered to schools, community groups, and local government, on a sliding scale and can include the following:</p>
+        <ul class="bullet-list">
+          <li>Sexual Assault Awareness Month programming</li>
+          <li>Trauma-informed staff training</li>
+          <li>Schools-based Restorative Practice</li>
+          <li>Community response after public harm</li>
+          <li>Survivor or perpetrator circles</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 03 Coalition -->
+    <article class="focus-block fade-in" id="coalition">
+      <span class="focus-num" aria-hidden="true">03</span>
       <div class="focus-copy">
         <p class="eyebrow">Creative &amp; Wellness Coalition</p>
         <h2>Local hands. <span class="accent">Local healing</span>.</h2>
         <p>A growing network of West Cork practitioners, therapists, yoga teachers, artists, mediators, somatic workers, and more, who gather under the Wendon Project to offer their skills in practical service for the community.</p>
         <p>We organise pop-up wellness days, sliding-scale clinics, and skills-share evenings. If you're a practitioner who wants to be part of it, please get in touch.</p>
-      </div>
-    </article>
-
-    <!-- 02 Sound -->
-    <article class="focus-block fade-in" id="sound">
-      <span class="focus-num" aria-hidden="true">02</span>
-      <div class="focus-copy">
-        <p class="eyebrow">Sound-Based Meditations</p>
-        <h2><span class="accent-sage">Resonance</span> as medicine.</h2>
-        <p>Sound work, bowls, gongs, voice, ambient acoustics, is one of the oldest tools we have for shifting the state of a room or a nervous system. I offer regular community sound baths and sessions for groups and post-circle integration.</p>
-      </div>
-    </article>
-
-    <!-- 03 Specialised -->
-    <article class="focus-block fade-in" id="facilitation">
-      <span class="focus-num" aria-hidden="true">03</span>
-      <div class="focus-copy">
-        <p class="eyebrow">Specialised Facilitation</p>
-        <h2>Leading <span class="accent">important conversations</span>.</h2>
-        <p>I lead prevention programming around gender-based violence. This work is offered to schools, community groups, and local government, on a sliding scale and can include the following:</p>
-        <ul class="bullet-list">
-          <li>Sexual Assault Awareness Month programming</li>
-          <li>Trauma-informed staff training</li>
-          <li>Schools-based restorative practice</li>
-          <li>Community response after public harm</li>
-          <li>Survivor or perpetrator circles</li>
-          <li>Healthy masculinity programming</li>
-        </ul>
       </div>
     </article>
 
@@ -143,9 +142,6 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="footer-logo-slot">
-      <image-slot id="footer-logo" shape="rounded" radius="8" fit="contain" placeholder="Drop your logo here (transparent PNG / SVG works best)"></image-slot>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Sunset Resolutions · West Cork, Ireland</span>
