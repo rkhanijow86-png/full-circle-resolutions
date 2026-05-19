@@ -334,9 +334,28 @@
       return;
     }
 
-    form.hidden = true;
-    success.hidden = false;
-    success.scrollIntoView({ behavior: "smooth", block: "center" });
+    const submitBtn = form.querySelector("button[type=submit]");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+
+    const org = document.getElementById("org").value.trim();
+
+    fetch("https://whimsical-bat-235.eu-west-1.convex.site/submit-contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, org, service, message }),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Server error");
+        form.hidden = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send your note <span class="arrow">→</span>';
+        alert("Something went wrong — please try emailing directly at hello@sunsetresolutions.com");
+      });
   });
 
   resetBtn.addEventListener("click", () => {
