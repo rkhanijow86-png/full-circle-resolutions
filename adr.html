@@ -264,12 +264,6 @@
           <a href="contact.html" class="btn btn-primary">Begin a conversation <span class="arrow">→</span></a>
         </div>
 
-        <!-- Where we gather -->
-        <a href="about.html#where-we-gather" class="venue-strip fade-in" style="margin-top: var(--s-6); margin-bottom: var(--s-4);">
-          <span class="venue-strip-label">Where we gather</span>
-          <span class="venue-strip-text">Sessions are held in a wellness retreat space in West Cork, a wellness space near your location, online, or a combination.</span>
-          <span class="venue-strip-arrow">→</span>
-        </a>
       </div>
     </div>
 
@@ -427,6 +421,17 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- WHERE WE GATHER -->
+<section class="venue-strip-section">
+  <div class="container">
+    <a href="about.html#where-we-gather" class="venue-strip fade-in">
+      <span class="venue-strip-label">Where we gather</span>
+      <span class="venue-strip-text">Sessions are held in a wellness retreat space in West Cork, a wellness space near your location, online, or a combination.</span>
+      <span class="venue-strip-arrow">→</span>
+    </a>
   </div>
 </section>
 
@@ -1254,6 +1259,12 @@
   transition: transform 0.2s;
 }
 .venue-strip:hover .venue-strip-arrow { transform: translateX(4px); }
+.venue-strip-section { padding: var(--s-5) 0; }
+@media (max-width: 480px) {
+  .venue-strip { padding: var(--s-3) var(--s-4); gap: var(--s-3); flex-wrap: nowrap; }
+  .venue-strip-text { font-size: 14px; }
+  .venue-strip-label { font-size: 10px; }
+}
 </style>
 
 </body>

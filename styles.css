@@ -347,7 +347,8 @@ section.tight { padding: var(--s-7) 0; }
     border-bottom: 1px solid var(--rule);
     padding: var(--s-4) var(--s-6);
     gap: var(--s-3);
-    align-items: flex-start;
+    align-items: flex-end;
+    text-align: right;
   }
   .nav-links.open { display: flex; }
   .nav-cta { padding: 8px 14px; }

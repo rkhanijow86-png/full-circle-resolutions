@@ -89,10 +89,8 @@
 <!-- WHERE WE GATHER LINK -->
 <section class="venue-strip-section">
   <div class="container">
-    <a href="about.html#where-we-gather" class="venue-strip fade-in">
+    <a href="about.html#where-we-gather" class="venue-strip venue-strip-centered fade-in">
       <span class="venue-strip-label">Where we gather</span>
-      <span class="venue-strip-text">We are based at a wellness retreat space in West Cork.</span>
-      <span class="venue-strip-arrow">→</span>
     </a>
   </div>
 </section>
@@ -271,11 +269,13 @@
   transition: transform 0.2s;
 }
 .venue-strip:hover .venue-strip-arrow { transform: translateX(4px); }
+.venue-strip-centered { justify-content: center; }
 
+.venue-strip-section { padding: var(--s-5) 0; }
 @media (max-width: 480px) {
   .focus-block { padding: var(--s-5) 0; }
-  .venue-strip { padding: var(--s-4) var(--s-4); gap: var(--s-3); }
-  .venue-strip-text { font-size: 15px; }
+  .venue-strip { padding: var(--s-3) var(--s-4); gap: var(--s-3); }
+  .venue-strip-label { font-size: 10px; }
 }
 </style>
 
