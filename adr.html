@@ -188,7 +188,7 @@
               <div class="experience-grid">
                 <div>
                   <h4>Holistic Conflict Retreats</h4>
-                  <p>For complex disputes, a retreat offers something a single session cannot: dedicated time. Held in spaces chosen for their warmth and quiet on the West Cork coast, the retreat is a sustained immersion in the resolution process. This is held in a setting designed to support the nervous system and to focus on your dispute in an impartial and supportive location.</p>
+                  <p>For complex disputes, a retreat offers something a single session cannot: dedicated time. Held in spaces chosen for their warmth and quiet on the West Cork coast, the retreat is a sustained immersion in the resolution process.</p>
                 </div>
                 <ul class="feature-list">
                   <li>
@@ -778,12 +778,11 @@
 }
 
 .experience-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: var(--s-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-6);
   margin-bottom: var(--s-9);
 }
-@media (max-width: 900px) { .experience-grid { grid-template-columns: 1fr; } }
 
 /* HDR FORMATS HEADER + ACCORDION */
 .hdr-formats {
