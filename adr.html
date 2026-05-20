@@ -427,10 +427,8 @@
 <!-- WHERE WE GATHER -->
 <section class="venue-strip-section">
   <div class="container">
-    <a href="about.html#where-we-gather" class="venue-strip fade-in">
-      <span class="venue-strip-label">Where we gather</span>
-      <span class="venue-strip-text">Sessions are held in a wellness retreat space in West Cork, a wellness space near your location, online, or a combination.</span>
-      <span class="venue-strip-arrow">→</span>
+    <a href="about.html#where-we-gather" class="venue-strip venue-strip-centered fade-in">
+      <span class="venue-strip-label">Where we Belong</span>
     </a>
   </div>
 </section>
@@ -629,9 +627,10 @@
   padding-top: var(--s-6);
   border-top: 1px solid var(--rule);
   display: flex;
-  align-items: baseline;
-  gap: var(--s-5);
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-3);
+  text-align: center;
 }
 .who-serves-label {
   font-family: var(--sans);
@@ -640,11 +639,9 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--forest-deep);
-  flex-shrink: 0;
 }
 .who-serves-list {
   margin: 0;
-  flex: 1;
   font-family: var(--display);
   font-size: clamp(17px, 1.6vw, 20px);
   line-height: 1.65;
@@ -653,9 +650,6 @@
 }
 .who-serves-list em { font-style: italic; }
 .who-dot { color: var(--terracotta-deep); margin: 0 var(--s-2); }
-@media (max-width: 700px) {
-  .who-serves { flex-direction: column; gap: var(--s-3); }
-}
 
 /* TAB STRIP */
 .tab-strip {
@@ -1259,6 +1253,7 @@
   transition: transform 0.2s;
 }
 .venue-strip:hover .venue-strip-arrow { transform: translateX(4px); }
+.venue-strip-centered { justify-content: center; }
 .venue-strip-section { padding: var(--s-5) 0; }
 @media (max-width: 480px) {
   .venue-strip { padding: var(--s-3) var(--s-4); gap: var(--s-3); flex-wrap: nowrap; }

@@ -223,8 +223,8 @@
   .hero-split { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
-  .hero-img { min-height: 280px; }
-  .hero-img image-slot { min-height: 280px; }
+  .hero-img { min-height: unset; aspect-ratio: 2 / 1; }
+  .hero-img image-slot { min-height: unset; width: 100%; height: 100%; aspect-ratio: 2 / 1; }
   .hero-copy { text-align: center; align-items: center; }
   .hero-brand-sub { margin-left: auto; margin-right: auto; }
   .hero-cta { justify-content: center; }
