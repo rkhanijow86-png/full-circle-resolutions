@@ -661,33 +661,41 @@
 }
 .tab {
   flex: 1;
-  background: color-mix(in oklab, var(--on-surface) 6%, transparent);
-  border: 1.5px solid color-mix(in oklab, var(--on-surface) 14%, transparent);
+  background: var(--cream-soft);
+  border: 2px solid color-mix(in oklab, var(--forest-deep) 25%, transparent);
   border-radius: var(--radius);
   text-align: center;
   padding: var(--s-5) var(--s-6);
   cursor: pointer;
   font-family: var(--sans);
-  color: var(--on-surface-soft);
+  color: var(--forest-deep);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--s-3);
   transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
   min-width: 200px;
+  box-shadow: 0 1px 4px color-mix(in oklab, var(--on-surface) 8%, transparent);
 }
 .tab:hover {
-  background: color-mix(in oklab, var(--terracotta) 10%, transparent);
+  background: color-mix(in oklab, var(--terracotta) 12%, var(--cream-soft));
   border-color: var(--terracotta);
-  color: var(--on-surface);
+  color: var(--terracotta-deep);
+  box-shadow: 0 2px 10px color-mix(in oklab, var(--terracotta) 20%, transparent);
 }
 .tab.active {
   background: var(--forest-deep);
   border-color: var(--forest-deep);
   color: var(--cream-soft);
-  box-shadow: 0 2px 12px color-mix(in oklab, var(--forest-deep) 30%, transparent);
+  box-shadow: 0 3px 14px color-mix(in oklab, var(--forest-deep) 35%, transparent);
 }
-.tab-label { font-size: 17px; font-weight: 600; letter-spacing: 0.01em; }
+.tab-label {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
 
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
