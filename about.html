@@ -23,7 +23,7 @@
     </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="adr.html">Dispute Resolution</a></li>
+      <li><a href="adr.html">Services</a></li>
       <li><a href="services.html">The Wendon Project</a></li>
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="contact.html" class="nav-cta">Reach out</a></li>
@@ -134,13 +134,18 @@
   </div>
 </section>
 
-<!-- WEST CORK / WHERE I PRACTICE -->
-<section class="from-cork fade-in">
+<!-- WHERE WE GATHER -->
+<section id="where-we-gather" class="where-gather-section">
   <div class="container">
-    <div class="from-cork-grid">
-      <div class="from-cork-img fade-in">
-        <image-slot id="about-cork-image" shape="rounded" radius="20" src="uploads/about-cork-image.webp" placeholder="Drop a West Cork landscape photo here"></image-slot>
-        <p class="from-cork-caption">Rooted in West Cork.</p>
+    <div class="where-gather-card fade-in">
+      <div class="where-gather-copy">
+        <p class="eyebrow">Where we gather</p>
+        <h3>A wellness space rooted in West Cork.</h3>
+        <p>This space is a beautiful retreat space on the West Cork coast, which has been built in service towards respect for the land and rejuvenation of the human.</p>
+        <a href="https://www.sonaretreat.ie/" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top: var(--s-5); display: inline-flex;">Visit Sona Retreat <span class="arrow" style="margin-left: 6px;">→</span></a>
+      </div>
+      <div class="where-gather-img">
+        <image-slot id="sona-retreat-img" shape="rounded" radius="14" src="uploads/about-cork-image.webp" placeholder="Drop a photo of Sona Retreat — the space, grounds, or interior"></image-slot>
       </div>
     </div>
   </div>
@@ -155,8 +160,8 @@
     <div class="personal-copy fade-in">
       <p class="eyebrow">My approach, in person</p>
       <h2>Personable, present, genuine, and <span class="accent">passionate about real care</span>.</h2>
-      <p>I am not a courtroom mediator who happens to do wellness. I am a practitioner who believes, having watched it happen many times now, that conflict resolves more durably when the body, the room, and the relationship are all attended to.</p>
-      <p>This is what is lost in this legal-centric world, which is the person itself, and it's time to rectify that.</p>
+      <p>I have watched it happen many times now, where conflict resolves more durably when the body, the room, and the relationship are all attended to.</p>
+      <p>This is what is lost in this legal-centric world, which is the person themselves, and it's time to rectify that.</p>
       <p>If you are weighing whether to work with me, the best first step is a conversation. There's no script and no obligation. I'd just like to hear what you're navigating.</p>
       <a href="contact.html" class="btn btn-primary">Schedule an introductory call <span class="arrow">→</span></a>
     </div>
@@ -209,8 +214,11 @@
   margin-top: var(--s-6);
 }
 @media (max-width: 900px) { .about-hero-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .portrait-wrap image-slot { min-height: 320px; }
+}
 @media (max-width: 480px) {
-  .portrait-wrap image-slot { min-height: 300px; aspect-ratio: 3 / 4; }
+  .portrait-wrap image-slot { min-height: 280px; aspect-ratio: 4 / 5; }
 }
 .about-hero-grid h1 em {
   font-style: italic;
@@ -358,6 +366,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--s-4);
 }
+@media (max-width: 480px) { .personal-gallery { gap: var(--s-3); } }
 .personal-gallery image-slot {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -382,6 +391,9 @@
   aspect-ratio: 16 / 7;
   min-height: 420px;
   display: block;
+}
+@media (max-width: 700px) {
+  .from-cork-img image-slot { aspect-ratio: 4 / 3; min-height: 0; }
 }
 .from-cork-caption {
   font-family: var(--serif);
@@ -424,6 +436,35 @@
   margin-bottom: 6px;
 }
 .values-list p { margin: 0; color: var(--on-surface-soft); }
+
+.where-gather-section { padding: var(--s-8) 0; }
+.where-gather-card {
+  background: color-mix(in oklab, var(--forest) 8%, var(--surface));
+  border: 1px solid color-mix(in oklab, var(--forest) 18%, transparent);
+  border-radius: var(--radius-lg);
+  padding: var(--s-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-8);
+  align-items: center;
+}
+.where-gather-copy h3 {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  line-height: 1.35;
+  margin: var(--s-3) 0 var(--s-4);
+}
+.where-gather-copy p { color: var(--on-surface-soft); max-width: 52ch; margin: 0; }
+.where-gather-img image-slot {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+@media (max-width: 900px) {
+  .where-gather-card { grid-template-columns: 1fr; gap: var(--s-6); }
+}
+@media (max-width: 480px) { .where-gather-card { padding: var(--s-6) var(--s-5); } }
 </style>
 
 </body>

@@ -24,7 +24,7 @@
     </button>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="adr.html">Dispute Resolution</a></li>
+      <li><a href="adr.html">Services</a></li>
       <li><a href="services.html">The Wendon Project</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Reach out</a></li>
@@ -74,7 +74,7 @@
     <div class="section-frame">
       <div class="section-header fade-in">
         <p class="eyebrow">Our services</p>
-        <h2><span style="color: var(--terracotta-deep);">Three ways</span> we can work together</h2>
+        <h2><span style="color: var(--terracotta-deep);">Four ways</span> we can work together</h2>
         <hr class="flourish" />
       </div>
       <div class="grid offerings-grid">
@@ -82,29 +82,35 @@
           <image-slot id="offer-img-1" class="tile-bg" shape="rect" src="uploads/offer-img-1.webp" placeholder="Drop a photo: mediation, retreat space, or coastal landscape"></image-slot>
           <span class="tile-overlay"></span>
           <div class="tile-body">
-            <span class="num">01 · Dispute Resolution</span>
             <h3>Holistic Dispute Resolution</h3>
             <p>Mediation in person or online, woven with wellness, ritual, and nourishment for lasting resolution.</p>
             <span class="tile-link">Learn more <span class="arrow">→</span></span>
           </div>
         </a>
         <a href="adr.html#circles" class="tile tile-photo fade-in delay-1">
-          <image-slot id="offer-img-2" class="tile-bg" shape="rect" src="uploads/offer-img-2.webp" placeholder="Drop a photo: a circle of chairs, group gathering"></image-slot>
+          <image-slot id="offer-img-2" class="tile-bg" shape="rect" src="uploads/Stone Circle.jpeg" position="50% 40%"></image-slot>
           <span class="tile-overlay"></span>
           <div class="tile-body">
-            <span class="num">02 · Group Facilitation</span>
             <h3>Restorative Circles</h3>
             <p>Facilitated circles for organisations, schools, and agencies to address harm, repair trust, and hear one another.</p>
             <span class="tile-link">Learn more <span class="arrow">→</span></span>
           </div>
         </a>
-        <a href="services.html#focus-areas" class="tile tile-photo fade-in delay-2">
-          <image-slot id="offer-img-3" class="tile-bg" shape="rect" src="uploads/offer-img-3.webp" placeholder="Drop a photo: West Cork community, sound bath, or natural setting"></image-slot>
+        <a href="adr.html#programming" class="tile tile-photo fade-in delay-2">
+          <image-slot id="offer-img-3" class="tile-bg" shape="rect" src="uploads/offer-img-2.webp"></image-slot>
+          <span class="tile-overlay" style="background: linear-gradient(180deg, rgba(20,15,10,0.0) 0%, rgba(20,15,10,0.2) 45%, rgba(20,15,10,0.58) 100%);"></span>
+          <div class="tile-body">
+            <h3>Programming</h3>
+            <p>Restorative justice and prevention programming for schools, community groups, and local government.</p>
+            <span class="tile-link">Learn more <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a href="services.html#focus-areas" class="tile tile-photo fade-in delay-3">
+          <image-slot id="offer-img-4" class="tile-bg" shape="rect" src="uploads/offer-img-3.webp" placeholder="Drop a photo: West Cork community, sound bath, or natural setting"></image-slot>
           <span class="tile-overlay"></span>
           <div class="tile-body">
-            <span class="num">03 · Community</span>
             <h3>Wendon Project</h3>
-            <p>A West Cork initiative connecting local practitioners in wellness, sound therapy, and trauma-informed community programming.</p>
+            <p>A West Cork Initiative connecting local practitioners towards service and sound meditations.</p>
             <span class="tile-link">Learn more <span class="arrow">→</span></span>
           </div>
         </a>
@@ -114,11 +120,11 @@
 </section>
 
 <!-- ============ PULL QUOTE / APPROACH ============ -->
-<section class="bg-forest approach fade-in">
+<section class="bg-forest approach fade-in" style="padding-top: var(--s-6);">
   <div class="container">
     <div class="approach-header fade-in">
       <p class="eyebrow" style="color: var(--cream-soft);">My approach</p>
-      <p class="pull-quote" style="color: var(--cream-soft);">My job is to facilitate a space for the whole person in service of resolution.</p>
+      <p class="pull-quote" style="color: var(--cream-soft);">I am not a courtroom mediator who happens to do wellness. I am a practitioner who believes in it.</p>
     </div>
     <ul class="approach-list fade-in delay-1">
       <li class="fade-in">
@@ -215,13 +221,14 @@
 }
 @media (max-width: 900px) {
   .hero-split { grid-template-columns: 1fr; }
-  .hero-img { order: -1; }
+}
+@media (max-width: 700px) {
+  .hero-img { min-height: 280px; }
+  .hero-img image-slot { min-height: 280px; }
 }
 @media (max-width: 480px) {
-  .hero-img { min-height: 300px; }
-  .hero-img image-slot { min-height: 300px; }
-  .hero-brand-name { font-size: clamp(36px, 9vw, 52px); }
-  .tile-photo { aspect-ratio: 1 / 1; min-height: 0; }
+  .hero-brand-name { font-size: clamp(32px, 9vw, 48px); }
+  .tile-photo { height: 260px; }
 }
 .hero-copy {
   text-align: left;
@@ -501,11 +508,11 @@
 .tile .arrow { transition: transform 0.2s; }
 .tile:hover .arrow { transform: translateX(4px); }
 .offerings-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--s-5);
 }
 .offerings-grid .tile { padding: var(--s-7); }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .offerings-grid { grid-template-columns: 1fr; }
 }
 
@@ -516,7 +523,7 @@
   border: 1px solid var(--rule);
   overflow: hidden;
   border-radius: var(--radius);
-  aspect-ratio: 3 / 4;
+  height: 380px;
   min-height: 0;
   display: flex;
   align-items: flex-end;
@@ -524,7 +531,7 @@
   isolation: isolate;
 }
 @media (max-width: 900px) {
-  .tile-photo { aspect-ratio: 4 / 3; min-height: 260px; }
+  .tile-photo { height: 300px; }
 }
 .tile-photo .tile-bg {
   position: absolute;
@@ -549,12 +556,17 @@
 .tile-photo .tile-body {
   position: relative;
   z-index: 2;
-  padding: var(--s-6) var(--s-7);
+  padding: var(--s-5) var(--s-6);
   color: var(--cream-soft);
   width: 100%;
-  max-width: 560px;
   display: flex;
   flex-direction: column;
+}
+.tile-photo .tile-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .tile-photo .tile-body p { flex: 1; }
 .tile-photo .tile-body h3 { font-size: 22px; margin-bottom: var(--s-2); line-height: 1.2; }
@@ -586,7 +598,14 @@
   margin-bottom: var(--s-6);
 }
 .approach-header .eyebrow { justify-content: center; }
-.approach-header .pull-quote { margin-left: auto; margin-right: auto; }
+.approach-header .pull-quote {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(28px, 3.2vw, 44px);
+  max-width: 22ch;
+  color: #fff;
+  opacity: 1;
+}
 .approach-list {
   list-style: none;
   padding: 0;

@@ -23,7 +23,7 @@
     </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="adr.html">Dispute Resolution</a></li>
+      <li><a href="adr.html">Services</a></li>
       <li><a href="services.html" class="active">The Wendon Project</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Reach out</a></li>
@@ -38,64 +38,62 @@
       <div class="services-header-copy">
         <div class="fade-in">
           <p class="eyebrow">The Wendon Project</p>
-          <h1>A homegrown <span class="accent">wellness coalition</span> for West Cork.</h1>
+          <h1>A homegrown <span class="accent">wellness project</span> for West Cork.</h1>
         </div>
         <div class="fade-in delay-2">
-          <p class="lead">The Wendon Project is a service-oriented initiative built for the place I live, gathering local practitioners, sound healers, and facilitators to give back to the community that has held me.</p>
+          <p class="lead">The Wendon Project is an initiative built for the place I live. This includes the Creative and Wellness Coalition and conducting Sound Meditations.</p>
+          <p class="lead" style="margin-top: var(--s-4);">All of this is in service towards the land we live on, and advocating for causes and organizations within the community.</p>
+          <p class="lead" style="margin-top: var(--s-4);">We are based at a wellness retreat space in West Cork.</p>
         </div>
       </div>
       <div class="services-header-img fade-in delay-1">
-        <image-slot id="services-band" shape="rounded" radius="20" src="uploads/services-band.webp" placeholder="A photo that captures the spirit of the Wendon Project, West Cork coast, an old tree, a community gathering, or a landscape."></image-slot>
+        <image-slot id="services-band" shape="rounded" radius="20" src="uploads/services-band.webp" position="50% 90%" placeholder="A photo that captures the spirit of the Wendon Project, West Cork coast, an old tree, a community gathering, or a landscape."></image-slot>
       </div>
     </div>
   </div>
 </header>
 
-<!-- THREE FOCUS AREAS -->
+<!-- TWO FOCUS AREAS -->
 <section id="focus-areas" class="bg-sage">
   <div class="container">
     <div class="section-header fade-in focus-section-header">
       <h2>How the Wendon Project shows up in West Cork.</h2>
     </div>
 
-    <!-- 01 Sound -->
-    <article class="focus-block fade-in" id="sound">
-      <span class="focus-num" aria-hidden="true">01</span>
+    <!-- Coalition — first -->
+    <article class="focus-block fade-in" id="coalition">
+      <div class="focus-copy">
+        <p class="eyebrow">Creative &amp; Wellness Coalition</p>
+        <h2>Local hands. <span class="accent">Local healing</span>.</h2>
+        <p>A growing network of West Cork practitioners, therapists, yoga teachers, artists, creatives, somatic workers, and more, who gather under the Wendon Project to offer their skills in practical service for the community.</p>
+        <p>What this has looked like are pop-up wellness days, sliding-scale clinics, skills-share evenings and more. We also have had dedicated months where we pick a cause to donate to rooted in West Cork, and practitioners come together in service of that cause.</p>
+        <p>If you're a practitioner who wants to be part of it, please get in touch.</p>
+      </div>
+    </article>
+
+    <!-- Sound — second, with image -->
+    <article class="focus-block focus-block-media fade-in" id="sound">
       <div class="focus-copy">
         <p class="eyebrow">Sound-Based Meditations</p>
         <h2><span class="accent-sage">Resonance</span> as medicine.</h2>
         <p>I facilitate sound meditations using Tibetan bowls, gongs, cultural instruments, drumming, voice, and more. Sound work is one of the oldest tools we have for shifting the state of a room or a nervous system. I offer regular community sound baths and sessions for groups and post-circle integration.</p>
       </div>
-    </article>
-
-    <!-- 02 Specialised -->
-    <article class="focus-block fade-in" id="facilitation">
-      <span class="focus-num" aria-hidden="true">02</span>
-      <div class="focus-copy">
-        <p class="eyebrow">Specialised Facilitation</p>
-        <h2>Restorative Justice and <span class="accent">Prevention Programming</span>.</h2>
-        <p>I lead restorative justice and prevention programming around discrimination, harassment, retaliation, and gender-based violence. This work is offered to schools, community groups, and local government, on a sliding scale and can include the following:</p>
-        <ul class="bullet-list">
-          <li>Sexual Assault Awareness Month programming</li>
-          <li>Trauma-informed staff training</li>
-          <li>Schools-based Restorative Practice</li>
-          <li>Community response after public harm</li>
-          <li>Survivor or perpetrator circles</li>
-        </ul>
+      <div class="focus-img">
+        <image-slot id="services-sound" shape="rounded" radius="16" src="uploads/services-sound.webp" placeholder="Sound bath, Tibetan bowls, a meditation circle, or a candlelit room"></image-slot>
       </div>
     </article>
 
-    <!-- 03 Coalition -->
-    <article class="focus-block fade-in" id="coalition">
-      <span class="focus-num" aria-hidden="true">03</span>
-      <div class="focus-copy">
-        <p class="eyebrow">Creative &amp; Wellness Coalition</p>
-        <h2>Local hands. <span class="accent">Local healing</span>.</h2>
-        <p>A growing network of West Cork practitioners, therapists, yoga teachers, artists, mediators, somatic workers, and more, who gather under the Wendon Project to offer their skills in practical service for the community.</p>
-        <p>We organise pop-up wellness days, sliding-scale clinics, and skills-share evenings. If you're a practitioner who wants to be part of it, please get in touch.</p>
-      </div>
-    </article>
+  </div>
+</section>
 
+<!-- WHERE WE GATHER LINK -->
+<section class="venue-strip-section">
+  <div class="container">
+    <a href="about.html#where-we-gather" class="venue-strip fade-in">
+      <span class="venue-strip-label">Where we gather</span>
+      <span class="venue-strip-text">We are based at a wellness retreat space in West Cork.</span>
+      <span class="venue-strip-arrow">→</span>
+    </a>
   </div>
 </section>
 
@@ -172,6 +170,9 @@
   .services-header-grid { grid-template-columns: 1fr; }
   .services-header-img image-slot { aspect-ratio: 4 / 3; min-height: 280px; }
 }
+@media (max-width: 480px) {
+  .services-header-img image-slot { aspect-ratio: 3 / 2; min-height: 220px; }
+}
 
 .focus-section-header {
   text-align: center;
@@ -183,30 +184,27 @@
 .focus-section-header h2 { margin-top: var(--s-2); }
 
 .focus-block {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: var(--s-6);
-  align-items: start;
   padding: var(--s-7) 0;
   border-top: 1px solid color-mix(in oklab, var(--on-surface) 12%, transparent);
 }
 .focus-block:last-of-type { border-bottom: 1px solid color-mix(in oklab, var(--on-surface) 12%, transparent); }
+.focus-block-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-8);
+  align-items: center;
+}
+.focus-img image-slot {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
 @media (max-width: 900px) {
-  .focus-block { grid-template-columns: 48px 1fr; gap: var(--s-4); padding: var(--s-6) 0; }
+  .focus-block { padding: var(--s-6) 0; }
+  .focus-block-media { grid-template-columns: 1fr; gap: var(--s-5); }
 }
 .focus-copy {
   max-width: none;
-}
-.focus-num {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(32px, 3vw, 44px);
-  font-weight: 400;
-  line-height: 1;
-  color: var(--terracotta-deep);
-  display: block;
-  letter-spacing: -0.02em;
-  padding-top: var(--s-2);
 }
 
 .bullet-list {
@@ -234,9 +232,50 @@
 .social-row { display: inline-flex; gap: var(--s-3); flex-wrap: wrap; justify-content: center; }
 .social-row .btn { padding: 12px 22px; }
 
+.venue-strip-section { padding: var(--s-6) 0; }
+.venue-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-6);
+  background: color-mix(in oklab, var(--forest) 7%, var(--surface));
+  border: 1px solid color-mix(in oklab, var(--forest) 16%, transparent);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.18s, border-color 0.18s;
+  flex-wrap: wrap;
+}
+.venue-strip:hover {
+  background: color-mix(in oklab, var(--forest) 13%, var(--surface));
+  border-color: color-mix(in oklab, var(--forest) 30%, transparent);
+}
+.venue-strip-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--forest);
+  white-space: nowrap;
+}
+.venue-strip-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--on-surface);
+  flex: 1;
+}
+.venue-strip-arrow {
+  font-size: 18px;
+  color: var(--forest);
+  transition: transform 0.2s;
+}
+.venue-strip:hover .venue-strip-arrow { transform: translateX(4px); }
+
 @media (max-width: 480px) {
-  .focus-block { grid-template-columns: 40px 1fr; gap: var(--s-3); padding: var(--s-5) 0; }
-  .focus-num { font-size: 28px; }
+  .focus-block { padding: var(--s-5) 0; }
+  .venue-strip { padding: var(--s-4) var(--s-4); gap: var(--s-3); }
+  .venue-strip-text { font-size: 15px; }
 }
 </style>
 
