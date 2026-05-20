@@ -60,7 +60,7 @@
     <div class="journey-grid">
       <div class="journey-col fade-in">
         <div class="journey-img">
-          <image-slot id="about-adr-img" shape="rounded" radius="16" src="uploads/about-adr-img.webp" placeholder="A photo of you working, mediation, training, or court setting"></image-slot>
+          <image-slot id="about-adr-img" shape="rounded" radius="16" fit="contain" src="uploads/about-adr-img.webp" placeholder="A photo of you working, mediation, training, or court setting"></image-slot>
         </div>
         <h3>The Professional path</h3>
         <p>My professional career began in formal dispute resolution, alternative dispute resolution, training programmes, and the structured back-and-forth of negotiated agreement. I worked in the policy realm of discrimination, harassment, and gender-based violence, as well as the prevention realm. My work took me towards healthy masculinity groups, facilitating agreements between parties, and more.</p>
@@ -68,7 +68,7 @@
       </div>
       <div class="journey-col fade-in delay-1">
         <div class="journey-img">
-          <image-slot id="about-wellness-img" shape="rounded" radius="16" src="uploads/about-wellness-img.webp" placeholder="A photo of you in a wellness setting, sound bath, yoga, or nature"></image-slot>
+          <image-slot id="about-wellness-img" shape="rounded" radius="16" fit="contain" src="uploads/about-wellness-img.webp" placeholder="A photo of you in a wellness setting, sound bath, yoga, or nature"></image-slot>
         </div>
         <h3>The Wellness path</h3>
         <p>Alongside this, I was training and practicing in sound meditations, facilitation of alternative medicinal spaces, and integration work. What started as a personal practice became something I offered to others such as community medicinal sessions, sound work, integration support, and more.</p>
@@ -332,7 +332,7 @@
   aspect-ratio: 16 / 9;
   display: block;
   margin-bottom: var(--s-5);
-  --slot-bg: color-mix(in oklab, var(--cream-soft) 80%, white);
+  --slot-bg: var(--surface);
   --slot-border: color-mix(in oklab, var(--rule) 60%, transparent);
 }
 /* Wellness photo: fills the frame, slightly brightened.
