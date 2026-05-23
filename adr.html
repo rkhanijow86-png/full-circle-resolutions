@@ -143,6 +143,7 @@
                 <div>
                   <h4>Holistic Mediation</h4>
                   <p>These are structured mediations offered in person at my West Cork practice, in a nature retreat, or online. These are always warm and wellness-informed.</p>
+                  <p>This is suited for relational disputes, workplace conflicts, and areas where two or more parties need to discuss grievances.</p>
                 </div>
                 <ul class="feature-list">
                   <li>
@@ -196,8 +197,8 @@
                   <li>
                     <span class="marker">i</span>
                     <div>
-                      <h4>Integration</h4>
-                      <p>Yoga, sound therapy, breathwork, and grounding time in nature woven through the formal mediation schedule.</p>
+                      <h4>Wellness Breaks</h4>
+                      <p>Meditation, sound therapy, breathwork, and grounding time in nature woven through the formal mediation schedule. The breaks help you integrate the work.</p>
                     </div>
                   </li>
                   <li>
@@ -210,19 +211,12 @@
                   <li>
                     <span class="marker">iii</span>
                     <div>
-                      <h4>Wellness Breaks</h4>
-                      <p>Movement, sound, and time outdoors woven between sessions. The breaks are part of the work.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="marker">iv</span>
-                    <div>
                       <h4>Ceremonial Resolution</h4>
                       <p>When the work is complete, we close with intention, a ritual that marks the agreement, honours the difficulty, and helps everyone leave whole.</p>
                     </div>
                   </li>
                   <li>
-                    <span class="marker">v</span>
+                    <span class="marker">iv</span>
                     <div>
                       <h4>Trauma-Informed Pacing</h4>
                       <p>Sessions are designed with the nervous system in mind. Breaks, soft transitions, and consent are built into the structure.</p>
@@ -675,8 +669,16 @@
   justify-content: center;
   gap: var(--s-3);
   transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
-  min-width: 200px;
+  min-width: 0;
   box-shadow: 0 1px 4px color-mix(in oklab, var(--on-surface) 8%, transparent);
+}
+.tab-label {
+  white-space: normal;
+  word-break: break-word;
+}
+@media (max-width: 700px) {
+  .tab-strip { flex-direction: column; gap: var(--s-2); }
+  .tab { width: 100%; flex: none; text-align: left; justify-content: flex-start; padding: var(--s-4); }
 }
 .tab:hover {
   background: color-mix(in oklab, var(--terracotta) 12%, var(--cream-soft));
@@ -1210,8 +1212,9 @@
   .adr-anchor-link { font-size: 12px; padding: 6px 8px; }
   .adr-anchor-cta { font-size: 13px; padding: 8px 12px; }
 
-  .tab { min-width: 0; padding: var(--s-4) var(--s-4); }
-  .tab-label { font-size: 15px; }
+  .tab-strip { flex-direction: column; gap: var(--s-2); }
+  .tab { min-width: 0; width: 100%; flex: none; padding: var(--s-4) var(--s-4); text-align: left; justify-content: flex-start; }
+  .tab-label { font-size: 14px; white-space: normal; word-break: break-word; }
 
   .panel-hero { padding: var(--s-5) var(--s-4); gap: var(--s-5); }
   .panel-hero-img image-slot { min-height: 200px; }
