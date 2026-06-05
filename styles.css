@@ -686,8 +686,9 @@ image-slot[data-filled] {
 .how-step {
   position: relative;
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
   font-family: var(--sans);
   font-size: clamp(14px, 1.2vw, 16px);
   font-weight: 500;
@@ -699,6 +700,7 @@ image-slot[data-filled] {
 }
 .how-step:hover,
 .how-step:focus-visible { background: color-mix(in oklab, var(--terracotta) 10%, var(--surface)); outline: none; }
+.how-step-top { display: flex; align-items: center; gap: 8px; }
 .how-label { font-style: normal; }
 .how-num {
   font-family: var(--sans);
@@ -717,60 +719,19 @@ image-slot[data-filled] {
   font-size: 14px;
 }
 .how-desc {
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
-  width: 240px;
-  background: var(--ink);
-  color: var(--cream-soft);
-  padding: 10px 14px;
-  border-radius: 10px;
+  display: block;
+  width: 100%;
+  color: var(--on-surface-soft);
   font-size: 13px;
   font-weight: 400;
+  font-style: italic;
   line-height: 1.45;
-  text-align: left;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s, transform 0.15s;
-  z-index: 30;
-  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.4);
-}
-.how-desc::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: var(--ink);
-}
-.how-step:hover .how-desc,
-.how-step:focus-visible .how-desc {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  margin-top: 3px;
 }
 @media (max-width: 700px) {
   .how-row { flex-direction: column; align-items: stretch; gap: var(--s-3); }
   .how-sep { display: none; }
   .how-eyebrow { margin-bottom: var(--s-2); text-align: center; }
-  .how-step { justify-content: flex-start; flex-direction: row; flex-wrap: wrap; }
-  /* On touch, just show descriptions inline beneath each step */
-  .how-desc {
-    position: static;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-    width: 100%;
-    background: transparent;
-    color: var(--on-surface-soft);
-    padding: 0;
-    box-shadow: none;
-    font-style: italic;
-    font-size: 14px;
-    margin-top: 2px;
-  }
-  .how-desc::after { display: none; }
 }
 
 /* ============================================
