@@ -86,7 +86,7 @@
         <p>I also offer facilitation of medicine experiences, under a safe and held container to drop in. If you are interested in these offerings, please reach out.</p>
       </div>
       <div class="focus-img focus-img-portrait">
-        <image-slot id="services-sound" shape="rounded" radius="16" fit="contain" src="uploads/sound-meditation-updated.jpg" placeholder="Sound bath, Tibetan bowls, a meditation circle, or a candlelit room"></image-slot>
+        <image-slot id="services-sound" shape="rounded" radius="16" src="uploads/sound-meditation-updated.jpg" placeholder="Sound bath, Tibetan bowls, a meditation circle, or a candlelit room"></image-slot>
       </div>
     </article>
 
@@ -204,17 +204,18 @@
   aspect-ratio: 4 / 3;
   display: block;
 }
-/* Portrait image — show full image at natural 3:4 ratio */
-.focus-img-portrait image-slot {
+/* Portrait image — #sound gives higher specificity to override 4/3 base rule */
+#sound .focus-img image-slot {
   aspect-ratio: 3 / 4;
+  min-height: 420px;
 }
 @media (max-width: 900px) {
   .focus-block { padding: var(--s-6) 0; }
   .focus-block-media { grid-template-columns: 1fr; gap: var(--s-5); }
-  /* On mobile, keep portrait ratio — full image still visible */
-  .focus-img-portrait image-slot {
+  #sound .focus-img image-slot {
     aspect-ratio: 3 / 4;
-    max-width: 420px;
+    min-height: 0;
+    max-width: 480px;
     margin: 0 auto;
     display: block;
   }
