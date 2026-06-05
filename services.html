@@ -204,10 +204,12 @@
   aspect-ratio: 4 / 3;
   display: block;
 }
-/* Sound meditation — plain img, full portrait, no cropping */
+/* Sound meditation — crop ceiling, show light fixture down to instruments */
 .sound-img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 65%;
   display: block;
   border-radius: 16px;
 }
@@ -215,8 +217,8 @@
   .focus-block { padding: var(--s-6) 0; }
   .focus-block-media { grid-template-columns: 1fr; gap: var(--s-5); }
   .sound-img {
-    max-width: 480px;
-    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
   }
 }
 .focus-copy {
