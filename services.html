@@ -85,8 +85,8 @@
         <p>I facilitate sound meditations using Tibetan bowls, gongs, cultural instruments, drumming, voice, and more. Sound work is one of the oldest tools we have for shifting the state of a room or a nervous system. I offer regular community sound baths, sessions for groups, and post-circle integration for folks who have engaged in other types of medicine work.</p>
         <p>I also offer facilitation of medicine experiences, under a safe and held container to drop in. If you are interested in these offerings, please reach out.</p>
       </div>
-      <div class="focus-img">
-        <image-slot id="services-sound" shape="rounded" radius="16" src="uploads/services-sound.webp" placeholder="Sound bath, Tibetan bowls, a meditation circle, or a candlelit room"></image-slot>
+      <div class="focus-img focus-img-portrait">
+        <image-slot id="services-sound" shape="rounded" radius="16" src="uploads/sound-meditation-updated.jpg" placeholder="Sound bath, Tibetan bowls, a meditation circle, or a candlelit room"></image-slot>
       </div>
     </article>
 
@@ -204,9 +204,20 @@
   aspect-ratio: 4 / 3;
   display: block;
 }
+/* Portrait image override — natural 3:4 crop on desktop */
+.focus-img-portrait image-slot {
+  aspect-ratio: 3 / 4;
+  max-height: 560px;
+  object-fit: cover;
+}
 @media (max-width: 900px) {
   .focus-block { padding: var(--s-6) 0; }
   .focus-block-media { grid-template-columns: 1fr; gap: var(--s-5); }
+  /* On mobile (stacked), cap portrait image height so it doesn't dominate the screen */
+  .focus-img-portrait image-slot {
+    aspect-ratio: 4 / 3;
+    max-height: 340px;
+  }
 }
 .focus-copy {
   max-width: none;
