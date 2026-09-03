@@ -90,72 +90,6 @@
         </div>
       </aside>
 
-      <!-- RIGHT: form -->
-      <div class="contact-form-wrap fade-in delay-1">
-        <form id="contact-form" novalidate>
-          <h3>Or send a note</h3>
-          <p class="form-intro">Tell me a little about what's happening. Anything you share here is held in confidence.</p>
-
-          <div class="form-field" id="field-name">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required autocomplete="name" />
-            <span class="error-msg">Please share your name.</span>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-field" id="field-email">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
-              <span class="error-msg">Please share a valid email so I can reply.</span>
-            </div>
-
-            <div class="form-field" id="field-org">
-              <label for="org">Organisation <span style="color: var(--muted); text-transform: none; letter-spacing: 0;">(if applicable)</span></label>
-              <input type="text" id="org" name="org" autocomplete="organization" />
-            </div>
-          </div>
-
-          <div class="form-field" id="field-service">
-            <label for="service">Service of interest</label>
-            <select id="service" name="service" required>
-              <option value="">, Select one ,</option>
-              <option value="adr">Alternative Dispute Resolution</option>
-              <option value="retreats">Holistic Retreats</option>
-              <option value="circles">Restorative Circles</option>
-              <option value="wenden">Wendon Project (Community)</option>
-              <option value="sound">Sound Therapy</option>
-              <option value="unsure">Not sure yet</option>
-            </select>
-            <span class="error-msg">Please choose an area so I can route you well.</span>
-          </div>
-
-          <div class="form-field" id="field-message">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required placeholder="A few sentences about what's prompting you to reach out…"></textarea>
-            <span class="error-msg">A short message helps me prepare for our conversation.</span>
-          </div>
-
-          <div class="form-field check-field" id="field-consent">
-            <label class="check-row">
-              <input type="checkbox" id="consent" required />
-              <span>I understand that anything shared here is held in confidence and used only to respond to my enquiry.</span>
-            </label>
-            <span class="error-msg" style="margin-left: 30px;">Please confirm consent to proceed.</span>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send your note <span class="arrow">→</span></button>
-            <span class="form-meta">No mailing list. No follow-up unless invited.</span>
-          </div>
-        </form>
-
-        <!-- Success state -->
-        <div id="form-success" class="form-success" hidden>
-          <h3>Thank you, your note has arrived.</h3>
-          <p>I'll respond personally within two business days. In the meantime, take care of yourself.</p>
-          <button type="button" id="reset-form" class="btn btn-secondary" style="margin-top: var(--s-4);">Send another</button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -166,7 +100,7 @@
     <div class="closing-single fade-in">
       <p class="eyebrow">A place at the edge of the Atlantic</p>
       <h2>If the work brings you here, you'll be <span class="accent-sage">glad it did</span>.</h2>
-      <p>West Cork has been a quiet refuge for difficult conversations for a long time. For retreats and in-person work, this is our home base. For everything else, I travel, and I work readily online.</p>
+      <p>For retreats and in-person work, this is our home base. For everything else, I travel, and I work readily online.</p>
     </div>
   </div>
 </section>
@@ -209,12 +143,13 @@
 
 .contact-body { padding-top: var(--s-9); padding-bottom: var(--s-9); }
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: var(--s-8);
-  align-items: start;
+  display: flex;
+  justify-content: center;
 }
-@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-aside {
+  max-width: 560px;
+  width: 100%;
+}
 
 .contact-info-card {
   background: var(--surface-2);
@@ -309,83 +244,6 @@
 }
 </style>
 
-<script>
-(function () {
-  const form = document.getElementById("contact-form");
-  const success = document.getElementById("form-success");
-  const resetBtn = document.getElementById("reset-form");
-
-  function setError(fieldId, hasError) {
-    const f = document.getElementById(fieldId);
-    if (f) f.classList.toggle("error", hasError);
-  }
-  function isEmail(v) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
-  }
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const service = document.getElementById("service").value;
-    const message = document.getElementById("message").value.trim();
-    const consent = document.getElementById("consent").checked;
-
-    let ok = true;
-    if (!name) { setError("field-name", true); ok = false; } else setError("field-name", false);
-    if (!isEmail(email)) { setError("field-email", true); ok = false; } else setError("field-email", false);
-    if (!service) { setError("field-service", true); ok = false; } else setError("field-service", false);
-    if (message.length < 4) { setError("field-message", true); ok = false; } else setError("field-message", false);
-    if (!consent) { setError("field-consent", true); ok = false; } else setError("field-consent", false);
-
-    if (!ok) {
-      const firstErr = form.querySelector(".form-field.error");
-      if (firstErr) firstErr.querySelector("input, select, textarea")?.focus();
-      return;
-    }
-
-    const submitBtn = form.querySelector("button[type=submit]");
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Sending…";
-
-    const org = document.getElementById("org").value.trim();
-
-    fetch("https://whimsical-bat-235.eu-west-1.convex.site/submit-contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, org, service, message }),
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error("Server error");
-        form.hidden = true;
-        success.hidden = false;
-        success.scrollIntoView({ behavior: "smooth", block: "center" });
-      })
-      .catch(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Send your note <span class="arrow">→</span>';
-        alert("Something went wrong — please try emailing directly at sunsetresolute@gmail.com");
-      });
-  });
-
-  resetBtn.addEventListener("click", () => {
-    form.reset();
-    form.hidden = false;
-    success.hidden = true;
-  });
-
-  // Live-validate on blur
-  ["name", "email", "service", "message"].forEach((id) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.addEventListener("blur", () => {
-      const v = el.value.trim();
-      const ok = id === "email" ? isEmail(v) : id === "message" ? v.length >= 4 : !!v;
-      setError("field-" + (id === "email" ? "email" : id === "service" ? "service" : id === "message" ? "message" : "name"), !ok);
-    });
-  });
-})();
-</script>
 
 </body>
 </html>
