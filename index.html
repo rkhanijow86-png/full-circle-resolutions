@@ -68,8 +68,8 @@
       <p class="mission-eyebrow">Our foundation</p>
     </div>
     <div class="mission-cols">
-      <p class="mission-lead">Sunset Resolutions supports dispute resolution through weaving the uncomfortable nature of conflict into wellness, ritual, and regulation.</p>
-      <p class="mission-body">Cold rooms, with bright fluorescent lights, and a big conference room table, do not heal conflict. Sunset Resolutions is born out of bringing warmth and wellness to disputes, which is missing from our current legal systems.</p>
+      <p class="mission-lead">Sunset Resolutions supports restorative practices through weaving the uncomfortable nature of conflict into wellness, ritual, and regulation.</p>
+      <p class="mission-body">Cold rooms, with bright fluorescent lights, and a big conference room table, do not heal a community. Sunset Resolutions is born out of bringing warmth and wellness to the front, which is missing from our current systems.</p>
     </div>
     <p class="mission-trio">To be heard. <span class="welcome-dot">·</span> To be held. <span class="welcome-dot">·</span> To find a way forward.</p>
   </div>
@@ -85,15 +85,7 @@
         <hr class="flourish" />
       </div>
       <div class="grid offerings-grid">
-        <a href="adr.html#retreats" class="tile tile-photo fade-in">
-          <image-slot id="offer-img-1" class="tile-bg" shape="rect" src="uploads/offer-img-1.webp" placeholder="Drop a photo: mediation, retreat space, or coastal landscape"></image-slot>
-          <span class="tile-overlay"></span>
-          <div class="tile-body tile-body-centered">
-            <h3>Holistic Dispute Resolution</h3>
-            <span class="tile-link">Learn more <span class="arrow">→</span></span>
-          </div>
-        </a>
-        <a href="adr.html#circles" class="tile tile-photo fade-in delay-1">
+        <a href="adr.html#circles" class="tile tile-photo fade-in">
           <image-slot id="offer-img-2" class="tile-bg" shape="rect" src="uploads/Stone Circle.jpeg" position="50% 40%"></image-slot>
           <span class="tile-overlay"></span>
           <div class="tile-body tile-body-centered">
@@ -101,19 +93,27 @@
             <span class="tile-link">Learn more <span class="arrow">→</span></span>
           </div>
         </a>
-        <a href="adr.html#programming" class="tile tile-photo fade-in delay-2">
-          <image-slot id="offer-img-3" class="tile-bg" shape="rect" src="uploads/offer-img-2.webp"></image-slot>
-          <span class="tile-overlay" style="background: linear-gradient(180deg, rgba(20,15,10,0.0) 0%, rgba(20,15,10,0.2) 45%, rgba(20,15,10,0.58) 100%);"></span>
+        <a href="adr.html#retreats" class="tile tile-photo fade-in delay-1">
+          <image-slot id="offer-img-1" class="tile-bg" shape="rect" src="uploads/offer-img-1.webp" placeholder="Drop a photo: mediation, retreat space, or coastal landscape"></image-slot>
+          <span class="tile-overlay"></span>
           <div class="tile-body tile-body-centered">
-            <h3>Programming</h3>
+            <h3>Holistic Dispute Resolution</h3>
             <span class="tile-link">Learn more <span class="arrow">→</span></span>
           </div>
         </a>
-        <a href="services.html#focus-areas" class="tile tile-photo fade-in delay-3">
+        <a href="services.html#focus-areas" class="tile tile-photo fade-in delay-2">
           <image-slot id="offer-img-4" class="tile-bg" shape="rect" src="uploads/offer-img-3.webp" placeholder="Drop a photo: West Cork community, sound bath, or natural setting"></image-slot>
           <span class="tile-overlay"></span>
           <div class="tile-body tile-body-centered">
             <h3>Wendon Project</h3>
+            <span class="tile-link">Learn more <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <a href="adr.html#programming" class="tile tile-photo fade-in delay-3">
+          <image-slot id="offer-img-3" class="tile-bg" shape="rect" src="uploads/offer-img-2.webp"></image-slot>
+          <span class="tile-overlay" style="background: linear-gradient(180deg, rgba(20,15,10,0.0) 0%, rgba(20,15,10,0.2) 45%, rgba(20,15,10,0.58) 100%);"></span>
+          <div class="tile-body tile-body-centered">
+            <h3>Programming</h3>
             <span class="tile-link">Learn more <span class="arrow">→</span></span>
           </div>
         </a>
@@ -687,17 +687,17 @@
   text-align: center;
 }
 .mission-cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s-8);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  align-items: center;
   margin-bottom: var(--s-6);
   padding-top: var(--s-2);
   border-top: 1px solid var(--rule);
   text-align: center;
-}
-@media (max-width: 700px) {
-  .mission-cols { grid-template-columns: 1fr; }
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .mission-lead {
   font-family: var(--display);
